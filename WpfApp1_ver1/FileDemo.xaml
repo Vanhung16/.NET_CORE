@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfApp1.FileDemo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:tk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="FileDemo" Height="450" Width="900">
+    <Grid>
+        <TextBox x:Name="txtContent" HorizontalAlignment="Left" Margin="10,0,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="474" Height="414" FontSize="24" FontWeight="Bold"/>
+        <ComboBox x:Name="cboFont" ItemsSource="{x:Static Fonts.SystemFontFamilies}" 
+                  SelectionChanged="cboFonts_SelectionChanged" 
+                  HorizontalAlignment="Left" Margin="516,10,0,0" VerticalAlignment="Top" 
+                  Width="274" Height="37">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" FontFamily="{Binding}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <tk:ColorPicker x:Name="cboColor" 
+                        AvailableColorsSortingMode="HueSaturationBrightness"
+                        SelectedColorChanged="SetColor_IndexChanged"
+                        SelectedColor="Blue"
+                        HorizontalAlignment="Left" 
+                        Margin="516,72,0,0" VerticalAlignment="Top" Width="274" Height="37"/>
+        
+        
+        <Button x:Name="btnOpenFIle" Content="Open File" HorizontalAlignment="Left" Margin="516,131,0,0" VerticalAlignment="Top" Width="274" Height="37" FontSize="16" FontFamily="Arial" Click="btnOpenFIle_Click"/>
+        <Button x:Name="btnSaveFile" Content="Save File" HorizontalAlignment="Left" Margin="516,194,0,0" VerticalAlignment="Top" Width="274" Height="37" FontSize="16" FontFamily="Arial" Click="btnSaveFile_Click"/>
+        <Button x:Name="btnDong" Content="Clear Text" HorizontalAlignment="Left" Margin="516,261,0,0" VerticalAlignment="Top" Width="274" Height="37" FontSize="16" FontFamily="Arial" Click="btnDong_Click"/>
+
+    </Grid>
+</Window>

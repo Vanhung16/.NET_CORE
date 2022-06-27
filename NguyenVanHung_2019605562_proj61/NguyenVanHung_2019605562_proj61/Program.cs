@@ -8,6 +8,72 @@ namespace NguyenVanHung_2019605562_proj61
         static List<Student> list = new List<Student>();
         static int choose;
 
+        public static void findById()
+        {
+            Console.Write("Nhap id can tim: ");
+            int id = int.Parse(Console.ReadLine());
+            Student x = null;
+            foreach (Student item in list)
+            {
+                if(item.id.CompareTo(id) == 0)
+                {
+                    x = item;
+                }
+            }
+            if(x != null)
+            {
+                Console.WriteLine("Thong tin: ");
+                x.output();
+            }
+            else
+            {
+                Console.WriteLine("ma id khong ton tai");
+            }
+        }
+        public static void findByaAddress()
+        {
+            Console.Write("Nhap adress can tim: ");
+            string address = Console.ReadLine();
+            Student x = null;
+            foreach (Student item in list)
+            {
+                if (item.address.CompareTo(address) == 0)
+                {
+                    x = item;
+                }
+            }
+            if (x != null)
+            {
+                Console.WriteLine("Thong tin: ");
+                x.output();
+            }
+            else
+            {
+                Console.WriteLine("dia chi khong ton tai");
+            }
+        }
+        public static void removeById()
+        {
+            Console.Write("Nhap id can xoa: ");
+            int id = int.Parse(Console.ReadLine());
+            Student x = null;
+            foreach (Student item in list)
+            {
+                if (item.id.CompareTo(id) == 0)
+                {
+                    x = item;
+                }
+            }
+            if (x != null)
+            {
+                list.Remove(x);
+                Console.WriteLine("thanh cong ");
+            }
+            else
+            {
+                Console.WriteLine("ma id khong ton tai");
+            }
+        }
         static void Main(string[] args)
         {
             while (true)
@@ -37,16 +103,17 @@ namespace NguyenVanHung_2019605562_proj61
                         }
                         break;
                     case 3:
-                        Console.Write("Nhap id can tim: ");
-                        int id = int.Parse(Console.ReadLine());
-                        foreach (var item in list) 
-                        {
-                            if(item. == id)
-                            {
-
-                            }
-                        }
+                        findById();
                         break;
+                    case 4:
+                        findByaAddress();
+                         break;
+                    case 5:
+                        removeById();
+                        break;
+                    case 6:
+                        return;
+
 
                 }
             }

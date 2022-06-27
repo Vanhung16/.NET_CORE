@@ -1,0 +1,30 @@
+﻿<Window x:Class="De1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:De1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="800" Background="#FFB6F3DF" BorderBrush="Yellow" BorderThickness="2">
+    <Grid>
+        <Label Content="Quản lý nhân viên" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Width="220" HorizontalContentAlignment="Center" FontSize="24" FontFamily="Times New Roman" FontWeight="Bold" Foreground="Blue"/>
+        <Label Content="Họ tên nhân viên" HorizontalAlignment="Left" Margin="119,80,0,0" VerticalAlignment="Top" Width="119" HorizontalContentAlignment="Left"/>
+        <Label Content="Loại nhân viên" HorizontalAlignment="Left" Margin="119,130,0,0" VerticalAlignment="Top" Width="119" HorizontalContentAlignment="Left"/>
+        <Label Content="Ngày sinh" HorizontalAlignment="Left" Margin="119,180,0,0" VerticalAlignment="Top" Width="119" HorizontalContentAlignment="Left"/>
+        <Label Content="Số tiền bán hàng" HorizontalAlignment="Left" Margin="119,230,0,0" VerticalAlignment="Top" Width="119" HorizontalContentAlignment="Left"/>
+        <TextBox Name="txtName" HorizontalAlignment="Left" Margin="266,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="223" Height="30" VerticalContentAlignment="Center"/>
+        <ComboBox Name="cboNV" HorizontalAlignment="Left" Margin="266,125,0,0" VerticalAlignment="Top" Width="135" Height="30" VerticalContentAlignment="Center" SelectedIndex="0">
+            <ComboBoxItem>Cơ hữu</ComboBoxItem>
+            <ComboBoxItem>Hợp đồng</ComboBoxItem>
+            <ComboBoxItem>Cộng tác viên</ComboBoxItem>
+        </ComboBox>
+        <DatePicker Name="dateBirth" HorizontalAlignment="Left" Margin="266,175,0,0" VerticalAlignment="Top" Height="30" Width="134" VerticalContentAlignment="Center"/>
+        <TextBox Name="txtMoney" HorizontalAlignment="Left" Margin="266,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="223" Height="30" VerticalContentAlignment="Center"/>
+        <ListBox Name="lbNV" Margin="40,276,40,70"/>
+        <Button Name="btnNhap" Content="Nhập" HorizontalAlignment="Left" Margin="200,425,0,0" VerticalAlignment="Top" Height="30" Width="80" Click="btnNhap_Click"/>
+        <Button Name="btnXoa" Content="Xóa" HorizontalAlignment="Center" Margin="0,425,0,0" VerticalAlignment="Top" Height="30" Width="80" Click="btnXoa_Click"/>
+        <Button Name="btnWindow2" Content="Window2" HorizontalAlignment="Left" Margin="521,425,0,0" VerticalAlignment="Top" Height="30" Width="80" Click="btnWindow2_Click"/>
+        <TextBlock Name="blockErr" HorizontalAlignment="Left" Margin="521,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Height="128" Foreground="Red"/>
+
+    </Grid>
+</Window>

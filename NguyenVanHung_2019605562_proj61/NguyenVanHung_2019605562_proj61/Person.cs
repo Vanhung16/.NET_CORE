@@ -8,9 +8,9 @@ namespace NguyenVanHung_2019605562_proj61
 {
     class Person
     {
-        protected int id { get; set; }
-        protected string name { get; set; }
-        protected string address { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public string address { get; set; }
 
         public Person(int id, string name, string address)
         {

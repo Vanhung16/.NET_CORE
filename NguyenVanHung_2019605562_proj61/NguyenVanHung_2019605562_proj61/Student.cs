@@ -56,7 +56,7 @@ namespace NguyenVanHung_2019605562_proj61
     {
         public int Compare(Student x, Student y)
         {
-            throw new NotImplementedException();
+            return x.id.CompareTo(y.id);
         }
     }
 }
